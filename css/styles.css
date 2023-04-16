@@ -747,18 +747,24 @@ textarea {
     height: 24px;       
     text-align: center;    
     border: none;
+    border-radius: 50%;
+      
+    color: var(--color-icon);
+    background-color: var(--color-cornflower);
 
-    background-image: url(../images/main-page/close.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
-   
-    background-color: var(--color-white);
+    transition: background-color var(--duration) var(--function),
+                fill var(--duration) var(--function);
   } 
 
+   .btn-close:hover,
+   .btn-close:focus{
+    background-color: var(--color-ocean);
+    fill: var(--color-cornflower);
+  }
+
+   
  .form {
     padding: 24px;
-
 }
 
 .title-modal {
