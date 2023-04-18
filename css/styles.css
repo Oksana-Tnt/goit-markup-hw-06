@@ -858,13 +858,36 @@ textarea {
 font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.04em;
+opacity: 0.5;
 
 color: var(--color-light-slate);
+
+transition: opacity var(--duration) var(--function);
 }
-.input-accept input[type="checkbox"]{
-    width: 16px;
-    height: 16px;
-}
+
+.accept-icon {   
+   display: flex;   
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   position: relative;
+   width: 16px;
+   height: 16px;
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   border-radius: 2px;
+
+   transition: background-color var(--duration) var(--function),
+                   border-color var(--duration) var(--function);
+ }
+
+ .input-accept:checked + .accept-icon {   
+    background-color: var(--color-iris); 
+    border-color: var(--color-iris);
+ }
+
+ .input-accept:checked ~ .accept {   
+    opacity: 1;
+ }
 
 .privacy-policy  {
 font-size: 12px;
@@ -874,7 +897,6 @@ letter-spacing: 0.04em;
 color: var(--color-iris);
 }
 
-
 .name-icon {
     display: inline-block;
     position: absolute;
@@ -883,8 +905,7 @@ color: var(--color-iris);
     transform: translate(-50%);
      width: 18px;
      height: 24px;
-     background-color: var(--color-white);
-    
+     background-color: var(--color-white);    
 }
 
 
