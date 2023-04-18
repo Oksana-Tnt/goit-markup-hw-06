@@ -135,8 +135,10 @@ textarea {
 */
 
 .button {
-    display: block;       
-    text-align: center;    
+     
+    display: flex;
+    align-items: center;
+    text-align: center;
 
     font-family: inherit;
     font-weight: 500;
@@ -148,7 +150,6 @@ textarea {
     background-color: var(--color-iris);  
     
     cursor: pointer;   
-    
 }
 
 .button.primary {
@@ -160,8 +161,6 @@ textarea {
     border-radius: 4px;
     outline: none;
     
-    color: var(--color-white);
-    background-color: var(--color-iris);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition: background-color var(--duration) var(--function); 
@@ -774,7 +773,7 @@ textarea {
 
    
  .form {
-    padding: 24px;
+    padding: 24px; 
 }
 
 .title-modal {
@@ -816,6 +815,8 @@ textarea {
     outline: none;
     border: 1px solid var(--color-navy-blue-modal);
     border-radius: 4px;
+
+    color: var(--color-light-slate);
 
     transition: border-color var(--duration) var(--function), 
                 fill var(--duration) var(--function);
@@ -908,5 +909,70 @@ color: var(--color-iris);
      background-color: var(--color-white);    
 }
 
+.subscribe-container {
+    display: flex;
+    width: 453px;
 
+}
+.subscribe {
+    display: flex;  
+    align-items: end;
+    gap: 24px;
+
+}
+.subscribe-form {
+    transition: background-color var(--duration) var(--function);
+}
+.subscribe-form:focus-within >.subscribe-input {
+    background-color: var(--color-green);
+ } 
+.subscribe-label {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--color-white);
+}
+.subscribe-input {
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid var(--color-white);
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+    color: var(--color-white);
+    background-color: var(--color-navy-blue);
+    border-radius: 4px;
+    outline: none;
+}
+.btn-subscribe {
+    display: flex;
+    width: 156px;
+    height: 40px;  
+    text-align:center;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    gap: 16px;
+
+    transition: background-color var(--duration) var(--function);
+}
+
+.btn-subscribe:focus  {
+ background-color: var(--color-green);   
+}
+
+.subscribe-input::placeholder {
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+
+color: var(--color-white);
+}
 
