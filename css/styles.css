@@ -324,20 +324,9 @@ textarea {
     position: relative; 
 }
 
-.site-menu .current-link::after {
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    display: block;  
-    content: "";
-    width: 100%;
-    height: 4px;
-    background-color: var(--color-ocean);    
-    border-radius: 2px;
-   
-}
-
-.site-menu .menu::after {
+.site-menu .menu::after,
+.site-menu .current-link::after
+ {
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -347,14 +336,20 @@ textarea {
     height: 4px;
     transform: scaleX(0);
 
-    background-color: var(--color-ocean);    
+    background-color: transparent; 
     border-radius: 2px;
  
-    transition: transform var(--duration) var(--function); 
+    transition: transform var(--duration) var(--function),
+                background-color var(--duration) var(--function); 
 }  
 
+.site-menu .current-page::after  {
+    transform: scaleX(1);
+    background-color: var(--color-iris);
+}
 
-.site-menu .menu:hover::after {
+.site-menu .menu:hover::after
+ {
     transform: scaleX(1);
     background-color: var(--color-iris);
 }
@@ -619,6 +614,7 @@ textarea {
 }
 
 .subscribe-form {
+    padding: 0;
     display: flex;  
     align-items: end;
     gap: 24px;
@@ -816,12 +812,16 @@ color: var(--color-white);
                   opacity var(--duration) var(--function);
 } 
 
+.form {
+    padding-top: 72px;
+}
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
 } 
 
 .btn-close {
+    padding: 0;
     position: absolute;
     right: 24px;
     top: 24px;
@@ -829,7 +829,6 @@ color: var(--color-white);
     cursor: pointer;  
     width: 24px;
     height: 24px;    
-
     text-align: center;    
     border: none;
     border-radius: 50%;
@@ -846,10 +845,8 @@ color: var(--color-white);
     background-color: var(--color-ocean);
     fill: var(--color-cornflower);
   }
-   
- 
+    
 .title-modal {
-    margin-top: 72px;
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
@@ -915,7 +912,6 @@ color: var(--color-white);
  .form-field:focus-within >.name-icon {
     fill: var(--color-iris);
  } 
-
 
 .form-field  .form-label{
     display: block;
