@@ -167,7 +167,6 @@ textarea {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition: background-color var(--duration) var(--function); 
-
 }
 
 .button.secondary {
@@ -597,7 +596,9 @@ textarea {
     color: var(--color-cloud);
 }
 
-.social-media{
+.social-media,
+.subscribe-label {
+    display: block;
     margin-bottom: 16px;
 
     font-weight: 500;
@@ -615,6 +616,68 @@ textarea {
 .social-icon-footer:hover,
 .social-icon-footer:focus {
     background-color: var(--color-green);
+}
+
+.subscribe-form {
+    display: flex;  
+    align-items: end;
+    gap: 24px;
+    margin-left: -40px;
+}
+
+
+.subscribe-label {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--color-white);
+}
+.subscribe-input {
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid var(--color-white);
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+
+    color: var(--color-white);
+    background-color: var(--color-navy-blue);
+    border-radius: 4px;
+    outline: none;
+}
+
+.subscribe-input:focus {
+    background-color: var(--color-green);
+ } 
+.btn-subscribe {
+    display: flex;
+    width: 165px;
+    height: 40px;  
+    text-align:center;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    gap: 16px;
+
+    transition: background-color var(--duration) var(--function);
+}
+
+.btn-subscribe:focus  {
+ background-color: var(--color-green);   
+}
+
+.subscribe-input::placeholder {
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+
+color: var(--color-white);
 }
 
 /**
@@ -825,7 +888,10 @@ textarea {
     transition: color var(--duration) var(--function);
 }
 
-  
+.input-accept:checked ~ .label{   
+    color: var(--color-slate);
+  }
+ 
 .form-field  .form-input, 
 .form-field  .form-comment {
     padding: 8px 35px;   
@@ -895,12 +961,7 @@ textarea {
     background-repeat: no-repeat;
  }
 
- .input-accept:checked ~ .accept {   
-    color: red;
-    /*color: var(--color-slate);*/
- }
-
-.privacy-policy  {
+ .privacy-policy  {
 font-size: 12px;
 line-height: 1.33;
 letter-spacing: 0.04em;
@@ -918,66 +979,5 @@ color: var(--color-iris);
      background-color: var(--color-white);    
 }
 
-.subscribe {
-    display: flex;  
-    align-items: end;
-    gap: 24px;
-    margin-left: -40px;
-}
 
-.subscribe-form {
-    transition: background-color var(--duration) var(--function);
-}
-.subscribe-form:focus-within >.subscribe-input {
-    background-color: var(--color-green);
- } 
-.subscribe-label {
-    display: block;
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-
-    color: var(--color-white);
-}
-.subscribe-input {
-    width: 264px;
-    height: 40px;
-    padding: 8px 16px;
-    border: 1px solid var(--color-white);
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
-
-    color: var(--color-white);
-    background-color: var(--color-navy-blue);
-    border-radius: 4px;
-    outline: none;
-}
-.btn-subscribe {
-    display: flex;
-    width: 156px;
-    height: 40px;  
-    text-align:center;
-    padding: 8px 24px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    gap: 16px;
-
-    transition: background-color var(--duration) var(--function);
-}
-
-.btn-subscribe:focus  {
- background-color: var(--color-green);   
-}
-
-.subscribe-input::placeholder {
-font-size: 12px;
-line-height: 2;
-letter-spacing: 0.04em;
-
-color: var(--color-white);
-}
 

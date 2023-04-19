@@ -395,11 +395,11 @@
             </ul>
         </div>
         
-        <form class="subscribe">
-            <label class="subscribe-form">
-                <span class="subscribe-label">Subscribe</span>
+        <form class="subscribe-form">   
+            <div class="subscribe">
+                <p class="subscribe-label">Subscribe</p>
                 <input type="email" class="subscribe-input" placeholder="E-mail"> 
-            </label>
+            </div>
             <button type="submit" class="button btn-subscribe">
                 Subscribe
                 <svg width="24" height="24">
@@ -449,13 +449,12 @@
                     <textarea class="form-comment" name="comment" id="comment" cols="" rows="" placeholder="Text input"></textarea>
                 </label>
                  
-                <label for="accept" class="accept">                           
+                <label class="accept">                           
                         <input type="checkbox" name="accept" id="accept" class="input-accept visually-hidden">     
-                        <span class="accept-icon"> </span>  
-                        I accept the terms and conditions of the <a href="" class="privacy-policy">Privacy Policy</a>        
-                        
-                </label>
-              
+                        <span class="accept-icon"> </span>
+                        <span class="label">I accept the terms and conditions of the <a href="" class="privacy-policy">Privacy Policy</a> </span>       
+                         
+                </label>              
 
                 <button type="submit" class="button primary">Send</button>
             </form>
